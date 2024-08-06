@@ -14,7 +14,10 @@ public class LinearSearch
 
         int result = linearSearch(numbers, target); // Store result.
 
-        System.out.println("Target found at index: " + result); // Print result.
+        if(result > 0) // If element was found.
+            System.out.println("Target found at index: " + result); // Print result.
+        else // Element not found.
+            System.out.println("Target was not found in the array."); // Print not found message.
     }
 
     /**
@@ -32,7 +35,7 @@ public class LinearSearch
         for(int index = 0; index < end; index++) // Loop through numbers array.
         {
             if(numbers[index] == target) // If the current number is the target number.
-                return index; // Return index number target was found at.
+                return index; // Return index number target was found at (first occurrence).
         }
         return -1; // Indicates target was not found.
     }
