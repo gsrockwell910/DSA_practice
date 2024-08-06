@@ -26,16 +26,20 @@ public class BinarySearchRecursiveDemo
 
     private static int binarySearchRecursive(int[] numbers, int target, int left, int right)
     {
-        if(left <= right)
+        if(left <= right) // Same as regular BS, left should be less.
         {
-            int middle = (left + right) / 2;
-            if (numbers[middle] == target)
-                return middle;
-            else if (numbers[middle] < target)
+            int middle = (left + right) / 2; // Calculate middle.
+            if (numbers[middle] == target) // If current element is target.
+                return middle; // Return element.
+            else if (numbers[middle] < target) // If current element is less than target.
+                // Perform recursive search, moving the start point of the search
+                // to one element to the right of the middle.
                 return binarySearchRecursive(numbers, target, middle + 1, right);
             else if (numbers[middle] > target)
+                // Perform recursive search, moving the end point of the search
+                // to one element before the middle.
                 return binarySearchRecursive(numbers, target, left, middle - 1);
         }
-        return -1;
+        return -1; // Indicates target element was not in the array.
     }
 }
