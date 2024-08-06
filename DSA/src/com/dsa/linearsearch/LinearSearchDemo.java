@@ -14,7 +14,7 @@ public class LinearSearchDemo
 
         int result = linearSearch(numbers, target); // Store result.
 
-        if(result > 0) // If element was found.
+        if(result >= 0) // If element was found.
             System.out.println("Target found at index: " + result); // Print result.
         else // Element not found.
             System.out.println("Target was not found in the array."); // Print not found message.
