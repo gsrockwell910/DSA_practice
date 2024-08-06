@@ -1,5 +1,10 @@
 package com.dsa.binarysearch;
 
+/**
+ *  The BinarySearchDemo class demonstrates a binary search
+ *  operation in Java.
+ */
+
 public class BinarySearchDemo
 {
     public static void main(String[] args)
@@ -15,6 +20,15 @@ public class BinarySearchDemo
             System.out.println("Target was not found in the array."); // Print not found message.
     }
 
+    /**
+     *  The binarySearch method takes in an int array of numbers
+     *  and a target value to search for in that array. The binarySearch
+     *  method then performs a binary search on the array.
+     *
+     * @param numbers The int array to search.
+     * @param target The value to search for.
+     * @return The index of the target element if found, otherwise -1 is returned.
+     */
     private static int binarySearch(int[] numbers, int target)
     {
         return -1;
