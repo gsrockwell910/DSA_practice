@@ -1,7 +1,7 @@
 package com.dsa.linearsearch;
 
 /**
- *  The LinearSearch class demonstrates a linear search
+ *  The LinearSearchDemo class demonstrates a linear search
  *  operation in java.
  */
 
