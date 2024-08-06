@@ -26,6 +26,16 @@ public class BinarySearchRecursiveDemo
 
     private static int binarySearchRecursive(int[] numbers, int target, int left, int right)
     {
+        if(left <= right)
+        {
+            int middle = (left + right) / 2;
+            if (numbers[middle] == target)
+                return middle;
+            else if (numbers[middle] < target)
+                return binarySearchRecursive(numbers, target, middle + 1, right);
+            else if (numbers[middle] > target)
+                return binarySearchRecursive(numbers, target, left, middle - 1);
+        }
         return -1;
     }
 }
