@@ -22,7 +22,8 @@ public class LinearSearchDemo
 
     /**
      *  The linearSearch method takes in an int array of numbers
-     *  and a target value to search for in that array.
+     *  and a target value to search for in that array. The linearSearch
+     *  method then performs a linear search on the array.
      *
      * @param numbers An int array of numbers to search
      * @param target A target value to search for in the array
