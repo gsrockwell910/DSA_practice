@@ -45,7 +45,7 @@ public class BubbleSortDemo
             // - 1 keeps the second loops iteration in bounds of the array.
             for (int j = 0; j < size - i - 1; j++)
             {
-                if (numbers[j] > numbers[j + 1]) // Check if current value is less than next value.
+                if (numbers[j] > numbers[j + 1]) // Check if current value is greater than next value.
                 {
                     temp = numbers[j]; // Store current value in temp.
 
