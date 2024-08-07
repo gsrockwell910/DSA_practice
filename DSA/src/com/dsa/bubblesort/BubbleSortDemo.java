@@ -34,16 +34,19 @@ public class BubbleSortDemo
      */
     private static void bubbleSort(int[] numbers)
     {
-        int size = numbers.length; // Store array size in variable;
+        // Store last valid index - 1 keeps the second loops iteration in bounds of the array.
+        int size = numbers.length - 1;
         int temp; // Temp variable for holding swaps.
 
-        for (int i = 0; i < size; i++) // First loop keeps track of position in array.
+        // First loop keeps track of position in array, less than because of size - i
+        // condition in inner loop.
+        for (int i = 0; i < size ; i++)
         {
-            // Second loop swaps values. goes til size - i - 1 because
+            // Second loop swaps values. goes til size - i because
             // after each iteration of the outer loop i elements are sorted
             // at the end of the array, so no need to check them again.
             // - 1 keeps the second loops iteration in bounds of the array.
-            for (int j = 0; j < size - i - 1; j++)
+            for (int j = 0; j < size - i; j++)
             {
                 if (numbers[j] > numbers[j + 1]) // Check if current value is greater than next value.
                 {
