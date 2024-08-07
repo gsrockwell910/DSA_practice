@@ -1,29 +1,58 @@
 package com.dsa.bubblesort;
 
+/**
+ *  The BubbleSortDemo class demonstrates
+ *  the bubbleSort method.
+ */
 public class BubbleSortDemo
 {
     public static void main(String[] args)
     {
-        int[] numbers = {5, 1, 2, 8, 3, 7, 99, 0};
+        int[] numbers = {5, 1, 2, 8, 3, 7, 99, 0}; // Create array of numbers.
 
         System.out.println("Before sorting: ");
-        for(int num : numbers)
+        for(int num : numbers) // Loop through each number in unsorted array.
         {
-            System.out.print(num + " ");
+            System.out.print(num + " "); // Print it followed by a space.
         }
 
-       bubbleSort(numbers);
+       bubbleSort(numbers); // Sort array wih bubble sort method.
 
        System.out.println("\nAfter sorting: ");
-       for(int num : numbers)
+       for(int num : numbers) // Loop through each number in sorted array.
        {
-           System.out.print(num + " ");
+           System.out.print(num + " "); // Print it followed by a space.
        }
 
     }
 
-    private static int[] bubbleSort(int[] numbers)
+    /**
+     *  The bubbleSort method takes in an integer array
+     *  and performs a bubble sort operation on the array.
+     *
+     * @param numbers The array to be sorted.
+     */
+    private static void bubbleSort(int[] numbers)
     {
-        return null;
+        int size = numbers.length; // Store array size in variable;
+        int temp; // Temp variable for holding swaps.
+
+        for (int i = 0; i < size; i++) // First loop keeps track of position in array.
+        {
+            // Second loop swaps values. goes til size - i - 1 because
+            // after each iteration of the outer loop i elements are sorted
+            // at the end of the array, so no need to check them again.
+            // - 1 keeps the second loops iteration in bounds of the array.
+            for (int j = 0; j < size - i - 1; j++)
+            {
+                if (numbers[j] > numbers[j + 1]) // Check if current value is less than next value.
+                {
+                    temp = numbers[j]; // Store current value in temp.
+
+                    numbers[j] = numbers[j + 1]; // Swap current value and next value.
+                    numbers[j + 1] = temp; // Complete swap.
+                }
+            }
+        }
     }
 }
