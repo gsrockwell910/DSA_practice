@@ -5,15 +5,27 @@ public class SelectionSortDemo
     public static void main(String[] arg)
     {
         int[] numbers = {6, 5, 2, 8, 9, 4};
-        int size = numbers.length;
-        int temp = 0;
-        int minIndex = -1;
 
         System.out.println("Before sorting: ");
         for(int num : numbers)
         {
             System.out.print(num + " ");
         }
+
+        selectionSort(numbers);
+        
+        System.out.println("\nAfter sorting: ");
+        for(int num : numbers)
+        {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void selectionSort(int[] numbers)
+    {
+        int size = numbers.length;
+        int temp = 0;
+        int minIndex = -1;
 
         for(int i = 0; i < size - 1; i++)
         {
@@ -28,12 +40,6 @@ public class SelectionSortDemo
             temp = numbers[minIndex];
             numbers[minIndex] = numbers[i];
             numbers[i] = temp;
-        }
-
-        System.out.println("\nAfter sorting: ");
-        for(int num : numbers)
-        {
-            System.out.print(num + " ");
         }
     }
 }
